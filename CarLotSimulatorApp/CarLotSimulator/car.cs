@@ -3,6 +3,18 @@ namespace CarLotSimulator
 {
     public class car
     {
+
+        public car()
+
+        {
+
+            CarLot.NumberOfcars++; // car incresse by one 
+
+
+        }
+
+
+
         public int Year { get; set; }
         public string Model { get; set; }
         public string make { get; set; }
@@ -22,9 +34,7 @@ namespace CarLotSimulator
 
         }
 
-        public car()
-        {
-        }
+        
 
         public void makeEngineNoise(string enginenoise)
         {

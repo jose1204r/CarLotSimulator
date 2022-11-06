@@ -4,12 +4,15 @@ namespace CarLotSimulator
 {
     class Program
     {
+
+        
+
         static void Main(string[] args)
         {
             //TODO
 
-
-
+            
+            
 
             var lot = new CarLot();
 
@@ -63,13 +66,24 @@ namespace CarLotSimulator
             bwm.IsDriveable = true;
             lot.cars.Add(bwm);
 
+
+            var bwm2 = new car();
+            bwm2.make = "BMW";
+            bwm2.Year = 2021;
+            bwm2.Model = "X5";
+            bwm2.EngineNoise = "room";
+            bwm2.HonkNoise = "Beep";
+            bwm2.IsDriveable = true;
+            lot.cars.Add(bwm);
+
+
             // installation 2
             car josecar = new car()
             {
                 make = "Honda",
                 Year = 2017,
                 Model = "Civic",
-                EngineNoise = "vprrrr",
+                EngineNoise = "",
                 IsDriveable = false
               
 
@@ -101,9 +115,12 @@ namespace CarLotSimulator
             Console.WriteLine("***************************************************");
             foreach (var item in lot.cars)
             {
-                Console.WriteLine($"Year : {item.Year}, Make : {item.make}, Model : {item.Model}");
+            Console.WriteLine($"Year : {item.Year}, Make : {item.make}, Model : {item.Model}");
+
             }
 
+            Console.WriteLine("****************************************************");
+            Console.WriteLine($"NUMBERS OF CARS ON INVENTORY : {CarLot.NumberOfcars}"); // Numbers of cars
         }
 
     }
